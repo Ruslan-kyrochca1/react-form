@@ -1,0 +1,82 @@
+.container{
+    margin-top: 20px;
+}
+.input{
+    padding: 8px 16px;
+    border: 2px solid #a6a6a6;
+    border-radius: 8px;
+    display: block;
+    outline: 0;
+    width: 100%;
+    margin-top: 10px;
+    font-family: inherit;
+    font-size: inherit;
+}
+.input:focus{
+    border: 2px solid #65a3ff;
+}
+.input-filled{
+    background-color: #a6a6a6;
+}
+
+.input-unstyled{
+    border: none;
+    padding: 0;
+    border-radius: 0px;
+}
+
+.radius-xs{
+    border-radius: 2px;
+}
+.radius-sm{
+    border-radius: 5px;
+}
+.radius-md{
+    border-radius: 10px;
+}
+.radius-lg{
+    border-radius: 15px;
+}
+
+.description{
+  margin-top: 10px;
+  padding: 0;
+}
+
+.label{
+  font-size: 20px;
+}
+.label-withAsterisk::after{
+  content: "*";
+  color: red;
+  margin-left: 4px;
+}
+
+.errorText{
+  color: 'red';
+  font-size: '12px';
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.iconSection {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #868e96;
+  pointer-events: none;
+  z-index: 1;
+  margin-top: 4px;
+}
+
+.withIcon {
+  padding-left: 36px;
+}
