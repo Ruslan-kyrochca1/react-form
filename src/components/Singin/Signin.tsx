@@ -10,7 +10,7 @@ type SigninProps = {
 };
 
 const Signin: React.FC<SigninProps> = ({ handleSubmit }) => {
-    const {ref, handleChange, getValues} = useForm({
+    const {handleChange, getValues} = useForm({
         email: "",
         password: ""
     })
@@ -25,8 +25,8 @@ const Signin: React.FC<SigninProps> = ({ handleSubmit }) => {
             onChange={(event) => handleChange(event)}
             className={classes.form}
         >
-            <TextInput type="Email" name="email" description="описание" inputId="1" label="Email" placeholder="Email" required/>
-            <TextInput type="password" name="password" description="описание" inputId="2" label="Password" placeholder="Пароль" required/>
+            <TextInput type="Email" name="email" inputId="11" label="Email" placeholder="Email" required/>
+            <TextInput type="password" name="password" inputId="12" label="Password" placeholder="Пароль" required/>
             <Button>Войти</Button>
         </form>
     )

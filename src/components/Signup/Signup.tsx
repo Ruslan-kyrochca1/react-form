@@ -2,7 +2,7 @@ import React from 'react'
 import TextInput from '../UI/TextInput/TextInput'
 import Button from '../UI/Button/Button'
 import classes from './Singup.module.css'
-import { RegisterSubmitType } from '../../types/types';
+import { RegisterSubmitType, SizeType } from '../../types/types';
 import { useForm } from '../hooks/useForm';
 
 type SignupProps = {
@@ -11,7 +11,7 @@ type SignupProps = {
 
 const Signup: React.FC<SignupProps> = ({ handleRegister }) => {
   const [error, setError] = React.useState<string | null>(null);
-  const {ref, handleChange, getValues} = useForm({
+  const {handleChange, getValues} = useForm({
     name:"",
     text: "",
     email: "",
@@ -36,7 +36,9 @@ const Signup: React.FC<SignupProps> = ({ handleRegister }) => {
       id: 1,
       type: 'text',
       name: 'nickname',
+      icon: <span>@</span>,
       label: 'Ник',
+      size:"large" as SizeType, 
       placeholder: 'Придумайте ник',
       description: 'Будет отображаться в профиле',
       variant: 'default',
@@ -47,6 +49,7 @@ const Signup: React.FC<SignupProps> = ({ handleRegister }) => {
       name: 'email',
       label: 'Email',
       placeholder: 'example@mail.com',
+      size:"small" as SizeType,
       description: 'Для того, чтоб держать вас в курсе последних новостей',
       variant: 'default',
       withAsterisk: true,
@@ -58,7 +61,6 @@ const Signup: React.FC<SignupProps> = ({ handleRegister }) => {
       name: 'sex',
       label: 'Пол',
       placeholder: 'Ваш пол',
-      description: 'Укажите ваш пол',
       variant: 'default',
     },
     {
@@ -67,7 +69,6 @@ const Signup: React.FC<SignupProps> = ({ handleRegister }) => {
       name: 'password',
       label: 'Пароль',
       placeholder: 'Придумайте пароль',
-      description: 'Пароль должен быть надёжным',
       withAsterisk: true,
       required: true,
       variant: 'default',
