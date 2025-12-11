@@ -1,0 +1,22 @@
+.form{
+    margin: 0 auto;
+    margin-top: 200px;
+    display: flex;
+    flex-direction:column;
+    
+    width: 500px;
+    padding: 20px 30px;
+    border-radius: 12px;
+    border: 1px solid #000;
+}
+.container{
+    display: flex;
+}
+.button{
+    margin-top: 10px;
+}
+
+.error{
+    color: red;
+    text-align: center;
+}
